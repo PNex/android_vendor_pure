@@ -18,9 +18,6 @@ include vendor/pure/configs/pure_phone.mk
 # Inherit from gemini device
 $(call inherit-product, device/xiaomi/gemini/aosp_gemini.mk)
 
-# Inherit arm64 phone gapps
-$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
-
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := gemini
 PRODUCT_DEVICE := gemini
@@ -37,4 +34,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="gemini-user 7.0 NRD90M V8.2.1.0.NAACNEB release-keys"
 
 TARGET_VENDOR := Xiaomi
-TARGET_DEVICE := gemini
